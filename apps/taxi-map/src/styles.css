@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.leaflet-container {
+  height: 25vw;
+}
+
+.taxi-icon {
+}
+
+.taxi-icon:after {
+  display: block;
+  width: 30px;
+  height: 30px;
+  content: "🚗";
+  font-size: 20px;
+}

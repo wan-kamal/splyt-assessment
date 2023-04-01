@@ -1,0 +1,47 @@
+{
+  "npmScope": "splyt-assessment",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "MTJlNTVlOTUtNWUyNy00MGFlLTgxNjctNTM5ODViMjI3NzUwfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "data-access": {
+      "tags": []
+    },
+    "taxi-backend": {
+      "tags": []
+    },
+    "taxi-map": {
+      "tags": []
+    },
+    "taxi-map-e2e": {
+      "tags": [],
+      "implicitDependencies": ["taxi-map"]
+    }
+  }
+}
